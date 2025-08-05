@@ -18,6 +18,7 @@ function App() {
       <Divp i="./Red" x="Red" bg={{ backgroundColor: "red" }} />
       <Divp i="./Green" x="Green" bg={{ backgroundColor: "green" }} />
       <Divp i="./Blue" x="Blue" bg={{ backgroundColor: "blue" }} />
+      <h1>This is a GPU heavy application, so yeah , don't burn your device</h1>
     </div>
   );
 }

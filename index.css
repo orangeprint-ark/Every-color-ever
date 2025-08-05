@@ -1,38 +1,80 @@
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
+  margin: 0;
+  background-color: #fff0f0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 #warning-box {
   height: 80vh;
   width: 80vw;
   background-color: rgb(255, 226, 226);
-  border: none;
-  box-shadow: 2px 2px 2px black;
   border-radius: 4px;
   position: absolute;
   left: 10vw;
   top: 10vh;
-  transition: top 0.3s ease;
-  display: grid;
-  grid-template-columns: 1fr, 1fr, 1fr;
+  transition: top 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 24px;
+  padding: 24px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  will-change: transform;
+  user-select: none;
+  cursor: default;
 }
-#warning-box:hover {
+#warning-box:hover,
+#warning-box:focus-within {
   top: 9vh;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+  outline: none;
 }
-button {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: white;
-  border-radius: 4px;
-  border: solid black;
-  transition: opacity 0.3s ease;
-  cursor: pointer;
-  width: 100%;
-  height: 100%
-}
-button:hover {
-  opacity: 0.7;
+#warning-box h1 {
+  order: -1;
+  margin: 0 0 16px 0;
+  font-weight: 700;
+  font-size: 1.5rem;
 }
 a {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: rgb(0, 0, 0);
+  text-decoration: none;
+  color: black;
+  display: inline-block;
+  border-radius: 6px;
+  transition: color 0.25s ease;
+  width: 100%;
+}
+a:hover,
+a:focus-visible {
+  color: #2ee59d;
+  outline: none;
+}
+button {
+  width: 100%;
+  height: 48px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: white;
+  border: 2px solid black;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #2ee59d;
+  user-select: none;
+  transition: opacity 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  outline-offset: 2px;
+}
+button:hover,
+button:focus-visible {
+  opacity: 0.85;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  background-color: #27c28a;
+  outline: none;
+}
+button:focus-visible {
+  outline: 3px solid #2ee59d;
+  outline-offset: 2px;
 }
