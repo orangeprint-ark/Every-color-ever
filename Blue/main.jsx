@@ -1,7 +1,7 @@
 const { createRoot } = ReactDOM;
 
 function BlueBlock({ blue, alpha }) {
-  const rgba = `rgba(${blue}, 0, 0, ${(alpha / 255).toFixed(3)})`;
+  const rgba = `rgba(0, 0, ${blue}, ${(alpha / 255).toFixed(3)})`;
   return (
     <div className="Diva" title={rgba} style={{ backgroundColor: rgba }}></div>
   );
