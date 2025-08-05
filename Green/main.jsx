@@ -1,6 +1,6 @@
 const { createRoot } = ReactDOM;
 
-function greenBlock({ green, alpha }) {
+function GreenBlock({ green, alpha }) {
   const rgba = `rgba(${green}, 0, 0, ${(alpha / 255).toFixed(3)})`;
   return (
     <div className="Diva" title={rgba} style={{ backgroundColor: rgba }}></div>
@@ -15,7 +15,7 @@ function App() {
     <>
       {alphas.map((alpha) =>
         greens.map((green) => (
-          <greenBlock key={`${green}-${alpha}`} green={green} alpha={alpha} />
+          <GreenBlock key={`${green}-${alpha}`} green={green} alpha={alpha} />
         ))
       )}
     </>

@@ -1,0 +1,18 @@
+#root {
+  display: grid;
+  grid-template-columns: repeat(256, 24px);
+  grid-template-rows: repeat(256, 24px);
+  gap: 4px;
+}
+
+.Diva {
+  border: 2px solid black;
+  box-shadow: 0 0 5px black;
+  display: inline-block;
+  user-select: none;
+  vertical-align: top;
+  text-align: center;
+  font-size: 8px;
+  line-height: 24px;
+  border-radius: 4px;
+}

@@ -1,14 +1,23 @@
 const { createRoot } = ReactDOM;
+
 console.log("Hello mom!");
+
+function Divp(props) {
+  return (
+    <a href={props.i}>
+      <button className="Button-of-wrath" style={props.bg}>
+        {props.x}
+      </button>
+    </a>
+  );
+}
 
 function App() {
   return (
     <div id="warning-box">
-      <div className="red">
-        <div className="redsquare">
-          
-        </div>
-      </div>
+      <Divp i="./Red" x="Red" bg={{ backgroundColor: "red" }} />
+      <Divp i="./Green" x="Green" bg={{ backgroundColor: "green" }} />
+      <Divp i="./Blue" x="Blue" bg={{ backgroundColor: "blue" }} />
     </div>
   );
 }
